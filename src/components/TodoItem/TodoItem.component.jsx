@@ -59,17 +59,20 @@ export default class Todo extends Component {
         <td className='table-cell table-cell_buttons'>
           <Link to={`/event/${this.state.id}`}>
             <button
+              title='редактировать'
               className='edit-btn'
               onClick={this.handleEditClick}
             ></button>
           </Link>
           <button
+            title='архивировать'
             className={`archive-btn ${
               this.props.todo.isArchived && 'archived'
             }`}
             onClick={this.handleArchiveClick}
           ></button>
           <button
+            title='удалить'
             className='delete-btn'
             onClick={this.handleDeleteClick}
           ></button>
