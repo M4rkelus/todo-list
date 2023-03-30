@@ -7,7 +7,7 @@ body[data-theme='light'] {
   --main-text-color: #333;
   --content-bg-color: #fff;
   --content-shadow-color: rgba(0, 0, 0, 0.2);
-  --todo-alt-bg-color: f2f2f2;
+  --todo-alt-bg-color: #f2f2f2;
   --button-bg-color: #48ff00;
   --button-alt-bg-color: #ff1900;
 }

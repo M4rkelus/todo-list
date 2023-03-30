@@ -33,7 +33,7 @@ export default class Filter extends Component {
               onChange={() => this.props.onFilter('all')}
             />
             <label htmlFor='all' className='filter__label'>
-              Все{' '}
+              Все
               <span className='filter__all-count'>
                 {this.context.todos.length}
               </span>
@@ -48,7 +48,7 @@ export default class Filter extends Component {
               onChange={() => this.props.onFilter('today')}
             />
             <label htmlFor='today' className='filter__label'>
-              Сегодня{' '}
+              Сегодня
               <span className='filter__today-count'>
                 {
                   this.context.todos.filter((todo) => {
@@ -67,7 +67,7 @@ export default class Filter extends Component {
               onChange={() => this.props.onFilter('undone')}
             />
             <label htmlFor='undone' className='filter__label'>
-              Не выполненные{' '}
+              Не выполненные
               <span className='filter__undone-count'>
                 {
                   this.context.todos.filter((todo) => {
@@ -86,7 +86,7 @@ export default class Filter extends Component {
               onChange={() => this.props.onFilter('unarchived')}
             />
             <label htmlFor='unarchived' className='filter__label'>
-              Не в архиве{' '}
+              Не в архиве
               <span className='filter__unarchived-count'>
                 {
                   this.context.todos.filter((todo) => {
