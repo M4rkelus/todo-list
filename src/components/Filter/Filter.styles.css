@@ -1,0 +1,44 @@
+.main__filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+  padding: 20px;
+  background-color: var(--content-bg-color);
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--content-shadow-color);
+  height: 800px;
+}
+
+.filter__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter__item {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+
+.filter__label {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-add {
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--button-bg-color);
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}

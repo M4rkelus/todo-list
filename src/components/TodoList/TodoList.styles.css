@@ -1,0 +1,25 @@
+.todos-table {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  background-color: var(--content-bg-color);
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--content-shadow-color);
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.table-row {
+  padding-left: 20px;
+}
+
+.table-row:nth-child(2n) {
+  background-color: var(--todo-alt-bg-color);
+}
+
+.table-row__text {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}

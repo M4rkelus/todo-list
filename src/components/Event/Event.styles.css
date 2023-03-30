@@ -1,0 +1,59 @@
+.add-todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-todo-input {
+  border: 1px solid #787878;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 780px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: var(--content-bg-color);
+  color: var(--main-text-color);
+}
+
+.add-todo-input::placeholder,
+.add-todo-textarea::placeholder {
+  color: var(--main-text-color);
+}
+
+.add-todo-textarea {
+  border: 1px solid #787878;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 300px;
+  width: 780px;
+  resize: none;
+  padding: 10px;
+  font-size: 18px;
+  background-color: var(--content-bg-color);
+  color: var(--main-text-color);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 780px;
+}
+
+.add-todo-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-bg-color);
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.back-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-alt-bg-color);
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}

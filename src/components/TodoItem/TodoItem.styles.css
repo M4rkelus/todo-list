@@ -1,0 +1,66 @@
+.table-cell {
+  padding: 10px;
+  height: 50px;
+  text-align: start;
+}
+
+.table-cell:nth-child(1) {
+  padding-left: 20px;
+  width: 16%;
+}
+
+.table-cell:nth-child(3) {
+  width: 100%;
+}
+
+.table-cell_buttons {
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+
+.todo-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.todo-description {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.edit-btn,
+.delete-btn,
+.archive-btn {
+  display: block;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.edit-btn {
+  background: no-repeat url('../../../img/edit.svg') center / cover;
+}
+
+.delete-btn {
+  background: no-repeat url('../../../img/delete.svg') center / cover;
+}
+
+.archive-btn {
+  opacity: 0.5;
+  background: no-repeat url('../../../img/archive.svg') center / cover;
+}
+
+.archived {
+  opacity: 1;
+}
