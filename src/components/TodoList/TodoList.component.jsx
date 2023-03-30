@@ -16,14 +16,16 @@ export default class Todos extends Component {
   };
 
   componentDidMount() {
+    const todos = this.context.todos || [];
+    const filterTodos = this.filterTodos(todos, 'all');
+    this.setState({ todos, filterTodos });
     this.handleToday();
   }
 
   handleDelete = (todo) => {
-    const todos = this.state.todos.filter((t) => {
-      return t.id !== todo.id;
-    });
-    this.setState({ todos });
+    const todos = this.state.todos.filter((t) => t.id !== todo.id);
+    const filterTodos = this.state.filterTodos.filter((t) => t.id !== todo.id);
+    this.setState({ todos, filterTodos });
     this.context.todos = todos;
 
     localStorage.setItem('state', JSON.stringify(this.context));
@@ -71,24 +73,25 @@ export default class Todos extends Component {
   };
 
   handleFilter = (filter) => {
-    this.setState({
-      filterTodos: this.state.todos.filter((todo) => {
-        switch (filter) {
-          case 'all':
-            return todo;
-          case 'done':
-            return todo.isDone;
-          case 'undone':
-            return !todo.isDone;
-          case 'unarchived':
-            return !todo.isArchived;
-          case 'today':
-            return todo.isToday;
-          default:
-            return todo;
-        }
-      }),
-    });
+    const filterTodos = this.filterTodos(this.state.todos, filter);
+    this.setState({ filterTodos });
+  };
+
+  filterTodos = (todos, filter) => {
+    switch (filter) {
+      case 'all':
+        return todos;
+      case 'done':
+        return todos.filter((todo) => todo.isDone);
+      case 'undone':
+        return todos.filter((todo) => !todo.isDone);
+      case 'unarchived':
+        return todos.filter((todo) => !todo.isArchived);
+      case 'today':
+        return todos.filter((todo) => todo.isToday);
+      default:
+        return todos;
+    }
   };
 
   render() {
@@ -108,9 +111,9 @@ export default class Todos extends Component {
       </tr>
     );
 
-    const todoListMarkup = this.state.filterTodos.length
-      ? this.state.filterTodos.map((todo, index) => todoItemMarkup(todo, index))
-      : this.state.todos.map((todo, index) => todoItemMarkup(todo, index));
+    const todoListMarkup = this.state.filterTodos.map((todo, index) =>
+      todoItemMarkup(todo, index)
+    );
 
     const archiveMarkup = archive.length ? (
       archive.map((todo, index) => todoItemMarkup(todo, index))
