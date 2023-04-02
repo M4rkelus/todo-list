@@ -111,8 +111,14 @@ export default class Todos extends Component {
       </tr>
     );
 
-    const todoListMarkup = this.state.filterTodos.map((todo, index) =>
-      todoItemMarkup(todo, index)
+    const todoListMarkup = this.state.todos.length ? (
+      this.state.filterTodos.map((todo, index) => todoItemMarkup(todo, index))
+    ) : (
+      <tr className='table-row'>
+        <td className='table-cell table-cell_text'>
+          <p className='table-row__text'>Нет задач</p>
+        </td>
+      </tr>
     );
 
     const archiveMarkup = archive.length ? (

@@ -34,9 +34,7 @@ export default class Filter extends Component {
             />
             <label htmlFor='all' className='filter__label'>
               Все
-              <span className='filter__all-count'>
-                {this.context.todos.length}
-              </span>
+              <span className='filter__count'>{this.context.todos.length}</span>
             </label>
           </div>
           <div className='filter__item'>
@@ -49,7 +47,7 @@ export default class Filter extends Component {
             />
             <label htmlFor='today' className='filter__label'>
               Сегодня
-              <span className='filter__today-count'>
+              <span className='filter__count'>
                 {
                   this.context.todos.filter((todo) => {
                     return todo.isToday;
@@ -68,7 +66,7 @@ export default class Filter extends Component {
             />
             <label htmlFor='undone' className='filter__label'>
               Не выполненные
-              <span className='filter__undone-count'>
+              <span className='filter__count'>
                 {
                   this.context.todos.filter((todo) => {
                     return !todo.isDone;
@@ -87,7 +85,7 @@ export default class Filter extends Component {
             />
             <label htmlFor='unarchived' className='filter__label'>
               Не в архиве
-              <span className='filter__unarchived-count'>
+              <span className='filter__count'>
                 {
                   this.context.todos.filter((todo) => {
                     return !todo.isArchived;

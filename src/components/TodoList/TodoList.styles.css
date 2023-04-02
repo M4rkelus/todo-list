@@ -1,16 +1,21 @@
 .todos-table {
   display: flex;
   flex-direction: column;
-  width: 800px;
   background-color: var(--content-bg-color);
   border-radius: 5px;
   box-shadow: 0 0 10px var(--content-shadow-color);
   border-collapse: collapse;
   overflow: hidden;
+  width: 100%;
 }
 
 .table-row {
-  padding-left: 20px;
+  padding: 5px 20px 5px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .table-row:nth-child(2n) {
@@ -22,4 +27,30 @@
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .todos-table {
+    width: 100%;
+  }
+
+  .table-row {
+    padding: 10px;
+  }
+
+  .table-row__text {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .todos-table {
+    width: 100%;
+  }
+
+  .table-row__text {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

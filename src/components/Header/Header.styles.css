@@ -1,5 +1,6 @@
 .main__header {
   background-color: #188ddb;
+  position: relative;
 }
 
 .main__header-wrap {
@@ -7,14 +8,16 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  gap: 100px;
+  padding: 0 20px;
+  box-shadow: 0 0 10px #545454;
 }
 
 .main__header-logo {
-  padding: 5px 0 10px 20px;
+  padding: 5px 0 10px;
   margin: 0;
   color: #fff;
   cursor: default;
+  text-shadow: 0 0 5px #545454;
 }
 
 .main__header-group-lnk {
@@ -43,4 +46,48 @@
 
 .lnk-active {
   background-color: rgba(40, 37, 43, 0.346);
+}
+
+@media screen and (max-width: 930px) {
+  .main__header-wrap {
+    padding: 0 10px;
+    box-shadow: none;
+  }
+
+  .main__header-lnk {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__header {
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+
+  .main__header-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main__header-group-lnk {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main__header-logo {
+    text-align: center;
+  }
+
+  .main__header-lnk {
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+    width: 100%;
+    padding: 10px 0;
+    height: 50px;
+    text-align: center;
+  }
 }

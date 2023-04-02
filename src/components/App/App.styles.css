@@ -13,4 +13,23 @@
   margin: 0 auto;
   text-align: center;
   gap: 20px;
+  width: 1000px;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__wrapper {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #root {
+    padding: 20px;
+  }
+
+  .main__wrapper {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
 }

@@ -7,7 +7,7 @@
   background-color: var(--content-bg-color);
   border-radius: 5px;
   box-shadow: 0 0 10px var(--content-shadow-color);
-  height: 800px;
+  height: 450px;
 }
 
 .filter__wrapper {
@@ -31,6 +31,12 @@
   width: 100%;
   justify-content: space-between;
   gap: 10px;
+  white-space: nowrap;
+}
+
+.filter__count {
+  width: 24px;
+  text-align: right;
 }
 
 .btn-add {
@@ -38,7 +44,50 @@
   width: 100%;
   border-radius: 5px;
   background-color: var(--button-bg-color);
-  padding: 5px 10px;
   color: #fff;
   cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+@media (max-width: 1024px) {
+  .todos-table {
+    width: 100%;
+  }
+
+  .table-row {
+    padding-left: 15px;
+  }
+
+  .table-row__text {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .main__filter {
+    height: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .todos-table {
+    width: 100%;
+  }
+
+  .table-row {
+    padding-left: 10px;
+  }
+
+  .table-row__text {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .main__filter {
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
 }

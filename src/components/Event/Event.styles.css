@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .add-todo-input {
@@ -9,7 +10,7 @@
   border-radius: 5px;
   margin-bottom: 10px;
   height: 50px;
-  width: 780px;
+  width: 100%;
   padding: 10px;
   font-size: 18px;
   background-color: var(--content-bg-color);
@@ -26,7 +27,7 @@
   border-radius: 5px;
   margin-bottom: 10px;
   height: 300px;
-  width: 780px;
+  width: 100%;
   resize: none;
   padding: 10px;
   font-size: 18px;
@@ -37,23 +38,41 @@
 .buttons-container {
   display: flex;
   justify-content: space-between;
-  width: 780px;
+  width: 100%;
 }
 
-.add-todo-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: var(--button-bg-color);
-  padding: 5px 10px;
-  color: #fff;
-  cursor: pointer;
-}
-
+.add-todo-btn,
 .back-btn {
   border: none;
   border-radius: 5px;
-  background-color: var(--button-alt-bg-color);
-  padding: 5px 10px;
+  padding: 10px 15px;
   color: #fff;
   cursor: pointer;
+  font-size: 18px;
+  width: 200px;
+}
+
+.add-todo-btn {
+  background-color: var(--button-bg-color);
+}
+
+.back-btn {
+  background-color: var(--button-alt-bg-color);
+}
+
+@media (max-width: 768px) {
+  .add-todo-input,
+  .add-todo-textarea {
+    width: 100%;
+  }
+
+  .buttons-container {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .add-todo-btn,
+  .back-btn {
+    width: 100%;
+  }
 }
