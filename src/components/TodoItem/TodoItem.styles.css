@@ -3,7 +3,7 @@
   text-align: start;
 }
 
-.table-cell:nth-child(1) {
+.table-cell:nth-child(1):not(.table-cell_text) {
   white-space: nowrap;
   width: 96px;
 }
@@ -111,7 +111,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  .table-cell:nth-child(1) {
+  .table-cell:nth-child(1):not(.table-cell_text) {
     display: none;
   }
 
