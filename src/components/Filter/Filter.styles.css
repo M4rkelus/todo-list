@@ -7,7 +7,7 @@
   background-color: var(--content-bg-color);
   border-radius: 5px;
   box-shadow: 0 0 10px var(--content-shadow-color);
-  height: 450px;
+  height: 500px;
 }
 
 .filter__wrapper {
